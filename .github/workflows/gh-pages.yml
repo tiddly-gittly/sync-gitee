@@ -5,11 +5,12 @@ on:
     branches:
       - master
   schedule:
-    - cron: '0 * * * *'
+    - cron: '0 16 * * *'
 
 jobs:
-  deploy:
+  deployment:
     runs-on: ubuntu-latest
+    environment: gitee
     steps:
       - name: Mirror the Github organization repos to Gitee.
         uses: Yikun/hub-mirror-action@master
